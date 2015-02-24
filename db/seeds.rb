@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Product.create! name: "Nexus 4", price: 20000
-Product.create! name: "Nexus 5", price: 30000
-Product.create! name: "Nexus 6", price: 40000
-Product.create! name: "iPhone 6", price: 50000
+Product.delete_all
+Product.create! name: "Nexus 4", price: 200, permalink: 'nexus-4'
+Product.create! name: "Nexus 5", price: 300, permalink: 'nexus-5'
+Product.create! name: "Nexus 6", price: 400, permalink: 'nexus-6'
+Product.create! name: "iPhone 6", price: 500, permalink: 'iphone-6'

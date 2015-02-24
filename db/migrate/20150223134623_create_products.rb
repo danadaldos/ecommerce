@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.integer :inventory, default: 0
       t.integer :price_in_cents, default: 0
-
+      t.string :permalink
       t.timestamps null: false
     end
   end

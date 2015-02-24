@@ -1,0 +1,12 @@
+<%= render 'payola/transactions/stripe_header' %>
+
+<h2>We sell cool phones!</h2>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name %>:
+      <%= number_to_currency product.price_in_dollars %>
+      <%= render 'payola/transactions/checkout', sellable: product %>
+    </li>
+  <% end %>
+</ul>

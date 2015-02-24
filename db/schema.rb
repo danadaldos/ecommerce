@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223134623) do
+ActiveRecord::Schema.define(version: 20150224020027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "charges", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "stripe_charge_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "payola_affiliates", force: :cascade do |t|
     t.string   "code"
@@ -118,6 +125,7 @@ ActiveRecord::Schema.define(version: 20150223134623) do
     t.string   "name"
     t.integer  "inventory",      default: 0
     t.integer  "price_in_cents", default: 0
+    t.string   "permalink"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   mount Payola::Engine => '/payola', as: :payola
+  root 'products#index'
+  get 'products/:id', to: 'products#show', as: :product
+  post 'charges' => 'charges#create', as: :charges
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

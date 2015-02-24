@@ -43,3 +43,4 @@ end
 
 gem 'pry'
 gem 'payola-payments'
+gem 'dotenv-rails'
