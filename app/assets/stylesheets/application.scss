@@ -1,0 +1,17 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+
+.jumbotron {
+  padding-left: 20px;
+}
+
+.product {
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+  width: 23%;
+  img {
+    max-width: 100%;
+  }
+}

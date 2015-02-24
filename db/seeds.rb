@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
-Product.create! name: "Nexus 4", price: 200, permalink: 'nexus-4'
-Product.create! name: "Nexus 5", price: 300, permalink: 'nexus-5'
-Product.create! name: "Nexus 6", price: 400, permalink: 'nexus-6'
-Product.create! name: "iPhone 6", price: 500, permalink: 'iphone-6'
+Product.create! name: "Bubble Wrap Calendar", price: 24.99, permalink: 'bubble-wrap-calendar', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/02/bubble-wrap-calendar.jpg'
+Product.create! name: "Swiss Stake: Canned Steak Patties", price: 86.99, permalink: 'canned-steak-patties', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/02/swiss-stake.jpg'
+Product.create! name: "Walden Farms Amazin' Mayo Spread, 12 Ounce", price: 3.79, permalink: 'mayo', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/02/walden-farms-mayo.jpg'
+Product.create! name: "Password Therapy", price: 2.99, permalink: 'passwords', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/02/password-therapy.jpg'
+Product.create! name: "iPod cable", price: 49999.99, permalink: 'ipod-cable', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/02/50k-ipod-cable1.jpg'
+Product.create! name: "13x13x13 speed cube", price: 334.99, permalink: 'speed-cube', photo_url: 'http://theworstthingsforsale.com/wp-content/uploads/2015/01/yj-moju-13-13-13-cube.jpg'

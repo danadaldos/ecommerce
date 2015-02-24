@@ -1,12 +1,22 @@
 <%= render 'payola/transactions/stripe_header' %>
+<div class="jumbotron">
+  <h1>We sell only the greatest things!</h1>
+  <p>No seriously, this stuff is real.</p>
+</div>
 
-<h2>We sell cool phones!</h2>
-<ul>
+<div id="products">
   <% @products.each do |product| %>
-    <li>
-      <%= product.name %>:
-      <%= number_to_currency product.price_in_dollars %>
-      <%= render 'payola/transactions/checkout', sellable: product %>
-    </li>
+    <div class="product panel panel-primary col-md-3">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= product.name %></h3>
+      </div>
+      <div class="panel-body">
+        <%= image_tag product.photo_url %>
+        <div class="buy">
+          <b><%= number_to_currency product.price_in_dollars %></b>
+          <%= render 'payola/transactions/checkout', sellable: product %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
