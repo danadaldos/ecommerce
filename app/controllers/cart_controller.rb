@@ -13,7 +13,6 @@ class CartController < ApplicationController
   # end
 
   def add
-    puts "params are #{params}"
     @product = Product.find params[:product_id]
     cart_id = session[:cart_id]
     if cart_id.nil?
