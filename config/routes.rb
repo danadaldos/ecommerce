@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'cart-item', to: 'cart_item#edit', as: :edit_cart_item
   post 'cart-item', to: 'cart_item#update', as: :cart_item
 
+  get 'products/autocomplete'
   get 'products/:id', to: 'products#show', as: :product
   post 'charges' => 'charges#create', as: :charges
   # The priority is based upon order of creation: first created -> highest priority.

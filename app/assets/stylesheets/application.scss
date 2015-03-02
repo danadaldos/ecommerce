@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
+@import "typeahead.scss";
 
 
 .jumbotron {
@@ -21,9 +22,13 @@
 }
 
 #search {
-  text-align: center;
   margin-bottom: 10px;
-  #search-input {
-    width: 33%;
+  text-align: center;
+  #search_products {
+    width: 100% !important;
   }
+  #search-button {
+    display: inline;
+  }
+
 }

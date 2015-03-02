@@ -10,4 +10,9 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find params[:id]
   end
+
+  def autocomplete
+    products = Product.search_products(params[:query])
+    render json: products
+  end
 end
