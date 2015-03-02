@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:search_products].present?
+      @products = Product.search_products(params[:search_products])
+    else
+      @products = Product.all
+    end
   end
 
   def show

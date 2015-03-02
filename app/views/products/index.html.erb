@@ -1,7 +1,19 @@
 <%= render 'payola/transactions/stripe_header' %>
-<div class="jumbotron">
+<div class="jumbotron home">
   <h1>We sell only the greatest things!</h1>
   <p>No seriously, this stuff is real.</p>
+</div>
+
+<div id="search">
+  <%= form_tag root_path, method: :get, class: "form-horizontal" do %>
+    <%= text_field_tag :search_products, nil, id: "search-input" %>
+    <%= submit_tag "Search", class: "btn btn-default" %>
+  <% end %>
+
+  <% if params[:search_products].present? %>
+    You searched for: <em><%= params[:search_products] %></em>.
+    <%= link_to "Clear search", root_path %>
+  <% end %>
 </div>
 
 <div id="products">
