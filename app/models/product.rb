@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
   validates :price, numericality: { greater_than: 0 }
-  include Payola::Sellable
 
   def price
     price_in_cents

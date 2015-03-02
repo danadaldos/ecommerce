@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Payola::Engine => '/payola', as: :payola
   root 'products#index'
+  get 'cart', to: 'cart#index', as: :cart
+  post 'cart', to: 'cart#add'
+  patch 'cart', to: 'cart#update'
+
   get 'products/:id', to: 'products#show', as: :product
   post 'charges' => 'charges#create', as: :charges
   # The priority is based upon order of creation: first created -> highest priority.

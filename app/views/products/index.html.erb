@@ -14,7 +14,9 @@
         <%= image_tag product.photo_url %>
         <div class="buy">
           <b><%= number_to_currency product.price_in_dollars %></b>
-          <%= render 'payola/transactions/checkout', sellable: product %>
+          <%= link_to "Add to cart", cart_path(product_id: product.id),
+            method: :post, remote: true, class: "btn btn-primary",
+            data: { product_id: product.id } %>
         </div>
       </div>
     </div>

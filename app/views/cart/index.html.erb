@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1>Your cart</h1>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  <% @cart.cart_items.each do |item| %>
+    <tr>
+      <td><%= item.product.name %></td>
+      <td><%= item.quantity %></td>
+      <td><%= number_to_currency(item.price_in_dollars) %></td>
+    </tr>
+  <% end %>
+  <tr></tr>
+  <tr>
+    <td></td>
+    <td><b>Total: </b></td>
+    <td><%= number_to_currency @cart.price_in_dollars %></td>
+</table>
+
+<%= render 'payola/transactions/checkout', sellable: @cart %>
