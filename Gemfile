@@ -41,12 +41,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'dotenv-rails'
 end
 
 gem 'pry'
 gem 'payola-payments'
-gem 'dotenv-rails'
 gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'pg_search'
 gem 'twitter-typeahead-rails'
+gem 'fog'
+gem 'carrierwave'
