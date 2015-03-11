@@ -11,4 +11,13 @@ $(window).ready(function(){
     displayKey: 'name',
     source: prods.ttAdapter()
   });
+
+  //Sets up masonry
+  var $container = $('#masonry-container');
+  $container.imagesLoaded(function () {
+            $container.masonry({
+                itemSelector:'.box',
+                isFitWidth: true
+              });
+          });
 })

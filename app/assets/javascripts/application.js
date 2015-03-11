@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require twitter/typeahead
+//= require masonry/jquery.masonry
+//= require isotope/jquery.isotope
 //= require_tree .

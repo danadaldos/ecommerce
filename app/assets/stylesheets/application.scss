@@ -1,6 +1,14 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 @import "typeahead.scss";
+@import "masonry_custom";
+@import 'masonry/basic';
+@import 'masonry/centered';
+@import 'masonry/fluid';
+@import 'masonry/gutters';
+@import 'masonry/infinitescroll';
+@import 'masonry/right-to-left';
+@import 'masonry/transitions';
 
 
 .jumbotron {
@@ -14,21 +22,46 @@
 .product {
   padding: 0;
   margin: 0;
-  margin-left: 15px;
-  width: 23%;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  margin-bottom: 15px;
   img {
     max-width: 100%;
   }
 }
 
-#search {
-  margin-bottom: 10px;
-  text-align: center;
-  #search_products {
-    width: 100% !important;
+.buy {
+  margin-top: 5px;
+  position: relative;
+  .price {
+    float: left;
+    position: absolute;
+    bottom: 0;
   }
-  #search-button {
-    display: inline;
+  .buy-now {
+    float: right;
   }
+}
 
+#search {
+  position: relative;
+  height: 26px;
+  margin-bottom: 10px;
+  #search-form {
+    position: absolute !important;
+    left: 5%;
+    .search-group {
+      .input {
+        float: left;
+      }
+        // margin-bottom: 10px;
+        // text-align: left;
+      #search_products {
+
+      }
+      #search-button {
+        display: inline;
+      }
+    }
+  }
 }

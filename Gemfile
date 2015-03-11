@@ -47,6 +47,7 @@ end
 gem 'pry'
 gem 'payola-payments'
 gem 'bootstrap-sass'
+gem 'masonry-rails'
 gem 'rails_admin'
 gem 'pg_search'
 gem 'twitter-typeahead-rails'

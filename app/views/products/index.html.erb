@@ -6,8 +6,10 @@
 
 <div id="search">
   <%= form_tag root_path, method: :get, class: "form-horizontal", id: "search-form" do %>
-    <%= label_tag :search %>
-    <%= text_field_tag :search_products, nil, class: "typeahead" %>
+    <div class="search-group">
+      <%= text_field_tag :search_products, nil, class: "typeahead" %>
+      <%= submit_tag "Search", class: "search-submit" %>
+    </div>
   <% end %>
 
   <% if params[:search_products].present? %>
@@ -16,18 +18,17 @@
   <% end %>
 </div>
 
-<div id="products">
+
+<div id="masonry-container" class="clearfix centered">
   <% @products.each do |product| %>
-    <div class="product panel panel-primary col-md-3">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= product.name %></h3>
-      </div>
+    <div class="product panel panel-primary box col3">
       <div class="panel-body">
         <%= image_tag product.photo_url %>
-        <div class="buy">
-          <b><%= number_to_currency product.price_in_dollars %></b>
+        <h4><%= product.name %></h4>
+        <h4><%= number_to_currency product.price_in_dollars %></h4>
+        <div>
           <%= link_to "Add to cart", cart_path(product_id: product.id),
-            method: :post, remote: true, class: "btn btn-primary",
+            method: :post, remote: true, class: "btn btn-primary buy-now",
             data: { product_id: product.id } %>
         </div>
       </div>
