@@ -4,7 +4,7 @@ Payola.configure do |config|
   config.secret_key = ENV["STRIPE_SECRET_KEY"]
   config.publishable_key = ENV["STRIPE_PUBLIC_KEY"]
 
-  config.send_email_for :receipt, :admin_receipt
+  #config.send_email_for :receipt, :admin_receipt
   # Example subscription:
   #
   # config.subscribe 'payola.package.sale.finished' do |sale|
