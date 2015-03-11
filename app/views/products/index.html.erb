@@ -13,8 +13,10 @@
   <% end %>
 
   <% if params[:search_products].present? %>
-    You searched for: <em><%= params[:search_products] %></em>.
-    <%= link_to "Clear search", root_path %>
+    <div id="search-details">
+      You searched for: <em><%= params[:search_products] %></em>.
+      <%= link_to "Clear search", root_path %>
+    </div>
   <% end %>
 </div>
 

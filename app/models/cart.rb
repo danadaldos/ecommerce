@@ -17,7 +17,7 @@ class Cart < ActiveRecord::Base
     price / 100.0
   end
 
-  # def redirect_path(sale)
-  #   "/cart"
-  # end
+  def redirect_path(sale)
+    '/cart/delete'
+  end
 end

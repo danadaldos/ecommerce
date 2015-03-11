@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'cart', to: 'cart#index', as: :cart
   post 'cart', to: 'cart#add'
   patch 'cart', to: 'cart#update'
+  get 'cart/delete', to: 'cart#clear', as: :cart_delete
 
   get 'cart-item', to: 'cart_item#edit', as: :edit_cart_item
   post 'cart-item', to: 'cart_item#update', as: :cart_item

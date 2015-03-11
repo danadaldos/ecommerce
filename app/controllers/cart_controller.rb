@@ -30,4 +30,11 @@ class CartController < ApplicationController
     end
 
   end
+
+  def clear
+    cart = Cart.find session[:cart_id]
+    cart.update_attribute(:status, "bought")
+    session[:cart_id] = nil
+    redirect_to root_path
+  end
 end
